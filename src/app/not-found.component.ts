@@ -1,11 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html' 
+  template: '<h1>Page not found</h1>'
 })
-export class AppComponent {
-}
+export class PageNotFoundComponent {}
 
 
 /*

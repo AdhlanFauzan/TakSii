@@ -1,0 +1,25 @@
+		<div>		
+		<table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>From</th>
+        <th>To</th>
+		<th>Owner</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let przejazd of przejazdy | async"
+			(click)="onSelect(przejazd)"
+			[class.selected]="isSelected(przejazd)">
+        <td>{{przejazd.id}}</td>
+        <td>{{przejazd.przejazdFrom}}</td>
+        <td>{{przejazd.przejazdTo}}</td>
+		<td>{{przejazd.owner}}</td>
+      </tr>
+     
+    </tbody>
+  </table>
+  
+<router-outlet></router-outlet>
+</div>

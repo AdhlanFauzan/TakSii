@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html' 
+  template:  `
+    <h2>CRISIS CENTER</h2>
+    <router-outlet></router-outlet>
+  `
 })
-export class AppComponent {
-}
+export class CrisisCenterComponent { }
 
 
 /*

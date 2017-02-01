@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: './app.component.html' 
+  template:  `
+    <p>Manage your heroes here</p>
+  `
 })
-export class AppComponent {
-}
+export class ManageHeroesComponent { }
 
 
 /*
