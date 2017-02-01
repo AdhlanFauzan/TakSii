@@ -6,7 +6,6 @@ import { PrzejazdyService }        from './przejazdy.service';
 
 import { PrzejazdyComponent }     from './przejazdy.component';
 import { PrzejazdyListaComponent }       from './przejazdyLista.component';
-import { PrzejazdyHomeComponent } from './przejazdyHome.component';
 import { PrzejazdDetailComponent }     from './przejazdDetail.component';
 
 import { PrzejazdyRoutingModule } from './przejazdyRouting.module';
@@ -20,7 +19,6 @@ import { PrzejazdyRoutingModule } from './przejazdyRouting.module';
   declarations: [
     PrzejazdyComponent,
     PrzejazdyListaComponent,
-    PrzejazdyHomeComponent,
     PrzejazdDetailComponent
   ],
   providers: [

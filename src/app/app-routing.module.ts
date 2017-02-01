@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ComposeMessageComponent }  from './compose-message.component';
 import { PageNotFoundComponent }    from './not-found.component';
+import { NewPrzejazdComponent } from './newPrzejazd/newPrzejazd.component';
 
 import { CanDeactivateGuard }       from './can-deactivate-guard.service';
 import { AuthGuard }                from './auth-guard.service';
@@ -20,16 +21,15 @@ const appRoutes: Routes = [
     canLoad: [AuthGuard]
   },
   {
-    path: 'crisis-center',
-    loadChildren: 'app/crisis-center/crisis-center.module#CrisisCenterModule',
-    data: { preload: true }
-  },
-  {
     path: 'przejazdy',
     loadChildren: 'app/przejazdy/przejazdy.module#PrzejazdyModule',
     data: { preload: true }
   },
-  { path: '',   redirectTo: '/crisis-center', pathMatch: 'full' },
+  {
+    path: 'newPrzejazd',
+    loadChildren: 'app/newPrzejazd/newPrzejazd.module#NewPrzejazdModule',
+  },
+  { path: '',   redirectTo: '/przejazdy', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 

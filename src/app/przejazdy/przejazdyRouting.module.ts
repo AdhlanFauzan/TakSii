@@ -1,7 +1,6 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PrzejazdyHomeComponent } from './przejazdyHome.component';
 import { PrzejazdyListaComponent }       from './przejazdyLista.component';
 import { PrzejazdyComponent }     from './przejazdy.component';
 import { PrzejazdDetailComponent }     from './przejazdDetail.component';
@@ -26,10 +25,6 @@ const przejazdyRoutes: Routes = [
               przejazd: PrzejazdDetailResolver
             }
           },
-          {
-            path: '',
-            component: PrzejazdyHomeComponent
-          }
         ]
       }
     ]

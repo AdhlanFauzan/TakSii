@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 
 @Component({
-  template: `
-    <p>Welcome to the Przejazdy TakSii</p>
+  template:  `
+    <h2>NOWY PRZEJAZD</h2>
+    <router-outlet></router-outlet>
   `
 })
-export class PrzejazdyHomeComponent { }
+export class NewPrzejazdComponent { }
 
 
 /*
