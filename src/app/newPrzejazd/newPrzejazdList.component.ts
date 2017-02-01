@@ -7,18 +7,7 @@ import { Observable }            from 'rxjs/Observable';
 import { Przejazd, PrzejazdyService } from '../przejazdy/przejazdy.service';
 
 @Component({
-  template: `
-    <ul class="items">
-      <li *ngFor="let crisis of crises | async"
-        (click)="onSelect(crisis)"
-        [class.selected]="isSelected(crisis)">
-          <span class="badge">{{ crisis.id }}</span>
-          {{ crisis.name }}
-      </li>
-    </ul>
-
-    <router-outlet></router-outlet>
-  `
+  template: `Lol`
 })
 export class NewPrzejazdListComponent implements OnInit {
   przejazdy: Observable<Przejazd[]>;
@@ -29,10 +18,6 @@ export class NewPrzejazdListComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) {}
-
-  isSelected(przejazd: Przejazd) {
-    return przejazd.id === this.selectedId;
-  }
 
   ngOnInit() {
     this.przejazdy = this.route.params

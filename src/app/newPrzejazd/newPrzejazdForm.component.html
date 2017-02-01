@@ -1,0 +1,17 @@
+    <div class="container">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+          <div class="form-group">
+            <label for="przejazdFrom">From</label>
+            <input type="text" class="form-control" [(ngModel)]="model.przejazdFrom" name="przejazdFrom" required>
+          </div>
+		  <div class="form-group">
+            <label for="przejazdTo">To</label>
+            <input type="text" class="form-control" [(ngModel)]="model.przejazdTo" name="przejazdTo" required>
+          </div>
+          <div class="form-group">
+            <label for="owner">Owner</label>
+            <input type="text" class="form-control" [(ngModel)]="model.owner" name="owner">
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>

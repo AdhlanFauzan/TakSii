@@ -9,6 +9,8 @@ import { NewPrzejazdListComponent }       from './newPrzejazdList.component';
 
 import { NewPrzejazdRoutingModule } from './newPrzejazdRouting.module';
 
+import { NewPrzejazdFormComponent } from './newPrzejazdForm.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -18,6 +20,7 @@ import { NewPrzejazdRoutingModule } from './newPrzejazdRouting.module';
   declarations: [
     NewPrzejazdComponent,
     NewPrzejazdListComponent,
+	NewPrzejazdFormComponent
   ],
   providers: [
     PrzejazdyService

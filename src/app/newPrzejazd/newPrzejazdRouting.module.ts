@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { NewPrzejazdListComponent }       from './newPrzejazdList.component';
 import { NewPrzejazdComponent }     from './newPrzejazd.component';
 
+import { NewPrzejazdFormComponent } from './newPrzejazdForm.component';
 
 const crisisCenterRoutes: Routes = [
   {
@@ -12,7 +13,8 @@ const crisisCenterRoutes: Routes = [
     children: [
       {
         path: '',
-        component: NewPrzejazdListComponent,
+        //component: NewPrzejazdListComponent,
+		component: NewPrzejazdFormComponent,
       }
     ]
   }
