@@ -1,16 +1,10 @@
 import { Component }        from '@angular/core';
 import { Router,
          NavigationExtras } from '@angular/router';
-import { AuthService }      from './auth.service';
+import { AuthService }      from './services/auth.service';
 
 @Component({
-  template: `
-    <h2>LOGIN</h2>
-    <p>{{message}}</p>
-    <p>
-      <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
-      <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
-    </p>`
+  templateUrl: 'login.component.html' 
 })
 export class LoginComponent {
   message: string;

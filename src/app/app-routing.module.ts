@@ -1,35 +1,34 @@
 import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { ComposeMessageComponent }  from './compose-message.component';
-import { PageNotFoundComponent }    from './not-found.component';
-import { NewPrzejazdComponent } from './newPrzejazd/newPrzejazd.component';
+import { PageNotFoundComponent }    from './NotFoundPage/not-found.component';
+import {HomePageComponent} from './Pages/HomePage/homePage.component';
 
-import { CanDeactivateGuard }       from './can-deactivate-guard.service';
-import { AuthGuard }                from './auth-guard.service';
+import { CanDeactivateGuard }       from './services/can-deactivate-guard.service';
+import { AuthGuard }                from './services/auth-guard.service';
 import { SelectivePreloadingStrategy } from './selective-preloading-strategy';
+
 
 const appRoutes: Routes = [
   {
-    path: 'compose',
-    component: ComposeMessageComponent,
-    outlet: 'popup'
-  },
-  {
     path: 'admin',
-    loadChildren: 'app/admin/admin.module#AdminModule',
+    loadChildren: 'app/Pages/AdminPage/admin.module#AdminModule',
     canLoad: [AuthGuard]
   },
   {
     path: 'przejazdy',
-    loadChildren: 'app/przejazdy/przejazdy.module#PrzejazdyModule',
+    loadChildren: 'app/Pages/PrzejazdyPage/przejazdy.module#PrzejazdyModule',
     data: { preload: true }
   },
   {
     path: 'newPrzejazd',
-    loadChildren: 'app/newPrzejazd/newPrzejazd.module#NewPrzejazdModule',
+    loadChildren: 'app/Pages/NowyPrzejazdPage/newPrzejazd.module#NewPrzejazdModule',
   },
-  { path: '',   redirectTo: '/przejazdy', pathMatch: 'full' },
+  {
+    path: 'home',
+    component: HomePageComponent,
+  },
+  { path: '',   redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];
 
