@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PrzejazdyListaComponent }       from './przejazdyLista.component';
 import { PrzejazdyComponent }     from './przejazdy.component';
-import { PrzejazdDetailComponent }     from './przejazdDetail.component';
+import { PrzejazdyDolaczComponent }     from './przejazdyDolacz.component';
 
 import { CanDeactivateGuard }     from '../../services/can-deactivate-guard.service';
 import { PrzejazdDetailResolver }   from '../../services/przejazdDetailResolver.service';
@@ -16,16 +16,13 @@ const przejazdyRoutes: Routes = [
       {
         path: '',
         component: PrzejazdyListaComponent,
-        children: [
-          {
+      },
+	  {
             path: ':id',
-            component: PrzejazdDetailComponent,
+            component: PrzejazdyDolaczComponent,
             canDeactivate: [CanDeactivateGuard],
             resolve: {
-              przejazd: PrzejazdDetailResolver
-            }
-          },
-        ]
+			przejazd: PrzejazdDetailResolver}
       }
     ]
   }

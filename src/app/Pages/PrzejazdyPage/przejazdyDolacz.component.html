@@ -1,0 +1,16 @@
+  <div *ngIf="przejazd">
+    <h3>Dołacz się do przejazdu z {{przejazd.przejazdFrom}}  do {{przejazd.przejazdTo}}.</h3>
+    <div>
+      <label>Data: </label> dodac date </div>
+    <div>
+	<div>
+      <label>Godzina: </label> dodac godzine</div>
+    <div>
+      <label>Wpisz swoj email: </label>
+      <input [(ngModel)]="editName" placeholder="email"/>
+    </div>
+    <p>
+      <button (click)="save()">Dołącz</button>
+      <button (click)="cancel()">Anuluj</button>
+    </p>
+  </div>

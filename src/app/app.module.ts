@@ -8,8 +8,9 @@ import { AppRoutingModule }        from './app-routing.module';
 
 import { LoginRoutingModule }      from './login-routing.module';
 import { LoginComponent }          from './login.component';
+
 import { PageNotFoundComponent }   from './NotFoundPage/not-found.component';
-import {HomePageComponent} from './Pages/HomePage/homePage.component';
+import { HomePageComponent } from './HomePage/homePage.component';
 
 import { DialogService }           from './services/dialog.service';
 

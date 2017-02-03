@@ -1,33 +1,14 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { slideInDownAnimation }   from '../../animations';
 import { Przejazd }         from '../../services/przejazdy.service';
 import { DialogService }  from '../../services/dialog.service';
 
 @Component({
-  template: `
-  <div *ngIf="przejazd">
-    <h3>"{{ editName }}"</h3>
-    <div>
-      <label>Id: </label>{{ przejazd.id }}</div>
-    <div>
-      <label>From: </label>
-      <input [(ngModel)]="editName" placeholder="from"/>
-    </div>
-    <p>
-      <button (click)="save()">Save</button>
-      <button (click)="cancel()">Cancel</button>
-    </p>
-  </div>
-  `,
+  templateUrl: './przejazdyDolacz.component.html',
   styles: ['input {width: 20em}'],
-  animations: [ slideInDownAnimation ]
 })
-export class PrzejazdDetailComponent implements OnInit {
-  @HostBinding('@routeAnimation') routeAnimation = true;
-  @HostBinding('style.display')   display = 'block';
-  @HostBinding('style.position')  position = 'absolute';
+export class PrzejazdyDolaczComponent implements OnInit {
 
   przejazd: Przejazd;
   editName: string;
@@ -71,7 +52,7 @@ export class PrzejazdDetailComponent implements OnInit {
     // so that the CrisisListComponent can select that crisis.
     // Add a totally useless `foo` parameter for kicks.
     // Relative navigation back to the crises
-    this.router.navigate(['../', { id: przejazdId, foo: 'foo' }], { relativeTo: this.route });
+    this.router.navigate(['../'], { relativeTo: this.route });
   }
 }
 

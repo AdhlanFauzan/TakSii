@@ -6,7 +6,7 @@ import { PrzejazdyService }        from '../../services/przejazdy.service';
 
 import { PrzejazdyComponent }     from './przejazdy.component';
 import { PrzejazdyListaComponent }       from './przejazdyLista.component';
-import { PrzejazdDetailComponent }     from './przejazdDetail.component';
+import { PrzejazdyDolaczComponent }     from './przejazdyDolacz.component';
 
 import { PrzejazdyRoutingModule } from './przejazdyRouting.module';
 
@@ -19,7 +19,7 @@ import { PrzejazdyRoutingModule } from './przejazdyRouting.module';
   declarations: [
     PrzejazdyComponent,
     PrzejazdyListaComponent,
-    PrzejazdDetailComponent
+    PrzejazdyDolaczComponent
   ],
   providers: [
     PrzejazdyService

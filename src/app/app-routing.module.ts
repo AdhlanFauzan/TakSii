@@ -2,7 +2,7 @@ import { NgModule }             from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { PageNotFoundComponent }    from './NotFoundPage/not-found.component';
-import {HomePageComponent} from './Pages/HomePage/homePage.component';
+import { HomePageComponent } from './HomePage/homePage.component';
 
 import { CanDeactivateGuard }       from './services/can-deactivate-guard.service';
 import { AuthGuard }                from './services/auth-guard.service';

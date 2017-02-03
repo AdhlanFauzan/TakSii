@@ -6,12 +6,12 @@ import { Przejazd, PrzejazdyService } from './przejazdy.service';
 
 @Injectable()
 export class PrzejazdDetailResolver implements Resolve<Przejazd> {
-  constructor(private cs: PrzejazdyService, private router: Router) {}
+  constructor(private przejazdyService: PrzejazdyService, private router: Router) {}
 
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<Przejazd> {
     let id = route.params['id'];
 
-    return this.cs.getPrzejazd(id).then(przejazd => {
+    return this.przejazdyService.getPrzejazd(id).then(przejazd => {
       if (przejazd) {
         return przejazd;
       } else { // id not found
